@@ -9,7 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Send, Sparkles, Trash2, Maximize2 } from "lucide-react";
+import { Send, Sparkles, Trash2, Maximize2, Heart } from "lucide-react";
 import DOMPurify from "isomorphic-dompurify";
 
 interface ChatMessage {
@@ -149,11 +149,11 @@ export default function AIChatModal({ user, noteContent: _noteContent = "" }: AI
           {messages.length === 0 && (
             <div className="h-full flex flex-col items-center justify-center text-center p-8 text-muted-foreground">
               <div className="p-4 rounded-full bg-primary/10 mb-3">
-                <Maximize2 className="h-8 w-8 text-primary opacity-80" />
+                <Heart className="h-8 w-8 text-primary opacity-80" />
               </div>
               <p className="text-base font-semibold text-foreground">Your Expansive AI Workspace</p>
               <p className="text-sm max-w-xl mt-1 leading-relaxed">
-                Ask questions about your notes, build tables, code templates, or drafts. The responses will be styled automatically using clean HTML layout frameworks.
+                Ask questions about your notes, build tables, or generate Multiple Choice Questions.
               </p>
             </div>
           )}
@@ -213,7 +213,7 @@ export default function AIChatModal({ user, noteContent: _noteContent = "" }: AI
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Query details, compile technical code frameworks, or refine summary formatting models..."
+            placeholder="Enter your prompts here, Lovie..."
             disabled={isLoading}
             className="flex-1 min-w-0 h-12 px-4 rounded-xl border border-input bg-background text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 shadow-inner"
           />
