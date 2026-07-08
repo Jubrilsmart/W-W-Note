@@ -2,8 +2,6 @@
 
 import { createContext, useContext, useState, ReactNode } from "react";
 import { Note } from "@prisma/client";
-import { getAllNotes } from "@/actions/db";
-import { getUser } from "@/auth/server";
 
 type NoteProviderContextType = {
     noteText: string;

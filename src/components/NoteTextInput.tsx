@@ -21,7 +21,7 @@ function NoteTextInput({ noteId, startingNoteText }: Props) {
 
     useEffect(() => {
         setNoteText(startingNoteText)
-    }, [, noteIdParam, noteId, setNoteText]);
+    }, [, noteIdParam, noteId, setNoteText, startingNoteText]);
 
     const handleUpdateNote = (e: ChangeEvent<HTMLTextAreaElement>) => {
         const text = e.target.value;

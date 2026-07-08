@@ -9,7 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Send, Sparkles, Trash2, Maximize2, Heart } from "lucide-react";
+import { Send, Sparkles, Trash2, Heart } from "lucide-react";
 import DOMPurify from "isomorphic-dompurify";
 
 interface ChatMessage {

@@ -1,7 +1,7 @@
 'use client';
 
 import { User } from "@supabase/supabase-js";
-import { createNoteAction, getAllNotes } from "@/actions/db";
+import { createNoteAction } from "@/actions/db";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
