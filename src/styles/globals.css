@@ -83,7 +83,7 @@
   --foreground: oklch(0.985 0.002 247.839);
   --card: oklch(0.21 0.034 264.665);
   --card-foreground: oklch(0.985 0.002 247.839);
-  --popover: oklch(0.21 0.034 264.665);
+  --popover: oklch(0.13 0.028 261.692);
   --popover-foreground: oklch(0.985 0.002 247.839);
   --primary: oklch(0.928 0.006 264.531);
   --primary-foreground: oklch(0.21 0.034 264.665);
@@ -102,7 +102,7 @@
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.21 0.034 264.665);
+  --sidebar: oklch(0.13 0.028 261.692);
   --sidebar-foreground: oklch(0.985 0.002 247.839);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0.002 247.839);
@@ -119,4 +119,38 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: hsl(0 0% 100%);
+  border-radius: 0 8px 8px 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(210 40% 90.1%);
+  border-radius: 8px;
+  border: 1px solid hsl(0 , 0%, 100%)
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(210 40% 85.1%);
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(217.2 32.6% 17.5%);
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(222.1 37.1% 11.4%);
 }
